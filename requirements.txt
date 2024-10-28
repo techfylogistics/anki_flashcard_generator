@@ -1,0 +1,6 @@
+openai==0.27.8  # You may want to adjust to the latest stable version
+PyPDF2==3.0.1  # For parsing PDF files
+langchain==0.0.208  # LangChain framework for handling LLMs and retrieval-augmented generation
+faiss-cpu==1.7.3  # FAISS for semantic search and vector store
+tiktoken==0.4.0  # Tokenizer used by OpenAI models
+pandas==2.1.1  # Optional: for handling tabular data if needed (you can omit this if unnecessary)
