@@ -9,7 +9,7 @@ app.config['OUTPUT_FOLDER'] = 'output'
 
 
 # Add the parent directory to the Python module search path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 @app.route('/')
 def upload_file():
