@@ -1,6 +1,7 @@
 import sys
 from flask import Flask, request, render_template, send_file
 import os
+#RK you need to import your module where you have code like below
 from flashcard_generator  import main  # Import your script's processing function
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -38,8 +39,9 @@ def process_pdf(input_path, output_path):
     # Your logic here
     # Example: Read the PDF and write the CSV
     # RK you need to install flask : pip install flask
-    #RK call your funtion from hre to generate the csv file
-    #RK your method should put the output file in upload_path (that is folder uploads in frontend folder) with same name as pdf file name.csv
+    #RK call your funtion from hre to generate the csv file like below
+        # main(input_path,output_path) 
+
     #RK go to this frontend folder and run : python app.py and then access in browser : http://127.0.0.1:5000/
     #RK following is just for testing i kept, you can remove after doing above
     with open(input_path, 'rb') as pdf_file:
@@ -47,8 +49,6 @@ def process_pdf(input_path, output_path):
         csv_data = "example,data,from,pdf"
         with open(output_path, 'w') as csv_file:
             csv_file.write(csv_data)
-    # you can uncomment  following  
-    # main(input_path,output_path) 
 
 
 
